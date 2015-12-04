@@ -24,18 +24,23 @@ public class Garaxe {
     }
     
     public void prezoAparcar(){
+        double precio;
         Scanner matri=new Scanner(System.in);
         System.out.println("Introduce la matricula ");
         matricula=matri.next();
         System.out.println("FACTURA ");
         System.out.println("MATRICULA COCHE: "+matricula);
         Scanner t=new Scanner(System.in);
-         System.out.println("Tempo: ");
+        System.out.println("Tempo: ");
         double tempo=t.nextDouble();
-        double precio=tempo=1.5;
-        precio=0.20+tempo;
-       
+        if(tempo<=2){
+            precio=1.5;
         System.out.println("PRECIO: "+precio);
+        }
+        if(tempo>2){
+            precio=1.5+0.20*tempo;
+        System.out.println("PRECIO: "+precio);
+        }
         
     }
     
